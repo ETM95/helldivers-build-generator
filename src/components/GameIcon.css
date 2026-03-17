@@ -1,0 +1,70 @@
+.game-icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  overflow: hidden;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Tamaños */
+.game-icon-small {
+  width: 24px;
+  height: 24px;
+}
+
+.game-icon-medium {
+  width: 32px;
+  height: 32px;
+}
+
+.game-icon-large {
+  width: 48px;
+  height: 48px;
+}
+
+.game-icon-xlarge {
+  width: 64px;
+  height: 64px;
+}
+
+/* Imagen */
+.game-icon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 2px;
+}
+
+/* Fallback icon */
+.game-icon-fallback {
+  width: 70%;
+  height: 70%;
+  color: #f1c40f;
+}
+
+/* Efecto hover */
+.game-icon-container:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+  box-shadow: 0 0 10px rgba(241, 196, 15, 0.5);
+}
+
+/* Bordes por tipo */
+.game-icon-container[data-type="orbital"] {
+  border: 1px solid #ff6b6b;
+}
+
+.game-icon-container[data-type="eagle"] {
+  border: 1px solid #4ecdc4;
+}
+
+.game-icon-container[data-type="sentry"] {
+  border: 1px solid #ff9f43;
+}
+
+.game-icon-container[data-type="apoyo"] {
+  border: 1px solid #9b59b6;
+}

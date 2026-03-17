@@ -1,0 +1,107 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  color: white;
+  padding: 2rem 0;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.title-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #f1c40f, #e67e22);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.title-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #f1c40f;
+}
+
+.subtitle {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+}
+
+.generate-section {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.btn-generate {
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #f1c40f, #e67e22);
+  border: none;
+  border-radius: 8px;
+  color: #0f0f0f;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s;
+}
+
+.btn-generate:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(241, 196, 15, 0.3);
+}
+
+.btn-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.checkbox-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a0a0a0;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  accent-color: #f1c40f;
+}
+
+@media (max-width: 768px) {
+  .title-container h1 {
+    font-size: 1.8rem;
+  }
+  
+  .title-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .btn-generate {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}

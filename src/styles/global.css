@@ -1,0 +1,304 @@
+/* Variables de colores - Temática Helldivers */
+:root {
+  /* Colores principales - Inspirados en la interfaz del juego */
+  --color-fondo: #0a0c0e;
+  --color-fondo-claro: #14181c;
+  --color-fondo-tarjeta: #1e252b;
+  --color-texto: #e8e9ea;
+  --color-texto-secundario: #8b949e;
+  --color-borde: #2d3741;
+  --color-borde-claro: #3d4a5a;
+  
+  /* Colores de facciones enemigas */
+  --color-terminids: #8bae6b;
+  --color-automatons: #d45d5d;
+  --color-illuminate: #6ba6d4;
+  
+  /* Colores de rareza de items */
+  --color-comun: #8b949e;
+  --color-rara: #6ba6d4;
+  --color-epica: #c77dff;
+  --color-legendaria: #ffae42;
+  
+  /* Colores de categorías */
+  --color-armadura: #d45d5d;
+  --color-arma-principal: #6ba6d4;
+  --color-arma-secundaria: #8bae6b;
+  --color-granada: #ffae42;
+  --color-mejora: #c77dff;
+  --color-estratagema: #ffd966;
+  
+  /* Super Tierra */
+  --color-super-earth: #ffd966;
+  --color-managed-democracy: #6ba6d4;
+  
+  /* Efectos */
+  --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --sombra-media: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --transicion: all 0.2s ease;
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+  font-size: 14px;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Overlay sutil con patrón del juego */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(var(--color-fondo-claro) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-fondo-claro) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Scrollbar personalizado - Estilo industrial */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-fondo-claro);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-borde);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-borde-claro);
+}
+
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--color-super-earth);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+h3 {
+  font-size: 1.1rem;
+  color: var(--color-texto-secundario);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Grid system minimalista */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-cols-1 { grid-template-columns: 1fr; }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Flexbox */
+.flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: 0.25rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+
+/* Espaciado */
+.m-0 { margin: 0; }
+.mt-2 { margin-top: 0.5rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mb-4 { margin-bottom: 1rem; }
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+
+/* Botones minimalistas */
+.btn {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid var(--color-borde-claro);
+  color: var(--color-texto);
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transicion);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  border-color: var(--color-super-earth);
+  color: var(--color-super-earth);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: var(--color-super-earth);
+  opacity: 0.1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-primary {
+  background: var(--color-super-earth);
+  border-color: var(--color-super-earth);
+  color: var(--color-fondo);
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--color-super-earth);
+}
+
+.btn-primary::before {
+  background: var(--color-fondo);
+}
+
+/* Badges para rarezas */
+.badge {
+  padding: 0.15rem 0.5rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid;
+}
+
+.badge-comun {
+  border-color: var(--color-comun);
+  color: var(--color-comun);
+}
+
+.badge-rara {
+  border-color: var(--color-rara);
+  color: var(--color-rara);
+}
+
+.badge-epica {
+  border-color: var(--color-epica);
+  color: var(--color-epica);
+}
+
+/* Línea divisoria estilo militar */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--color-borde-claro) 20%,
+    var(--color-borde-claro) 80%,
+    transparent 100%
+  );
+  margin: 2rem 0;
+}
+
+/* Tooltips minimalistas */
+.tooltip {
+  position: relative;
+}
+
+.tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.25rem 0.5rem;
+  background: var(--color-fondo-claro);
+  border: 1px solid var(--color-borde-claro);
+  font-size: 0.7rem;
+  white-space: nowrap;
+  z-index: 10;
+  margin-bottom: 0.5rem;
+}
+
+/* Animaciones */
+@keyframes terminal-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.terminal-cursor {
+  animation: terminal-blink 1s infinite;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+}

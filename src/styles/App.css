@@ -1,0 +1,205 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Header estilo terminal militar */
+.app-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-borde-claro);
+  position: relative;
+}
+
+.app-header::after {
+  content: '/// SUPER EARTH TERMINAL v2.0 ///';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-fondo);
+  padding: 0 1rem;
+  font-size: 0.7rem;
+  color: var(--color-texto-secundario);
+  letter-spacing: 1px;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.title-container h1 {
+  background: linear-gradient(135deg, var(--color-super-earth), #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(255, 217, 102, 0.3);
+}
+
+.title-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--color-super-earth);
+  opacity: 0.8;
+}
+
+/* Stats de guerra */
+.war-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-texto-secundario);
+}
+
+.war-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.war-stat-value {
+  color: var(--color-super-earth);
+  font-weight: 600;
+}
+
+/* Sección de generación */
+.generate-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+
+.btn-generate {
+  padding: 1.2rem 3rem;
+  background: transparent;
+  border: 2px solid var(--color-super-earth);
+  color: var(--color-super-earth);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transicion);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-generate:hover {
+  background: var(--color-super-earth);
+  color: var(--color-fondo);
+  box-shadow: 0 0 30px rgba(255, 217, 102, 0.3);
+}
+
+.btn-generate::before {
+  content: '►';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: left 0.3s;
+}
+
+.btn-generate:hover::before {
+  left: 20px;
+  color: var(--color-fondo);
+}
+
+.btn-generate::after {
+  content: '◄';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: right 0.3s;
+}
+
+.btn-generate:hover::after {
+  right: 20px;
+  color: var(--color-fondo);
+}
+
+/* Checkbox estilo terminal */
+.checkbox-section {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.terminal-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-borde-claro);
+  transition: var(--transicion);
+}
+
+.terminal-checkbox:hover {
+  border-color: var(--color-super-earth);
+}
+
+.terminal-checkbox input[type="checkbox"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--color-borde-claro);
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: var(--transicion);
+}
+
+.terminal-checkbox input[type="checkbox"]:checked {
+  border-color: var(--color-super-earth);
+  background: var(--color-super-earth);
+}
+
+.terminal-checkbox input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-fondo);
+  font-size: 0.7rem;
+}
+
+.terminal-checkbox span {
+  color: var(--color-texto-secundario);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Footer */
+.app-footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--color-borde-claro);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-texto-secundario);
+}
+
+.democracy-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.democracy-message span {
+  color: var(--color-super-earth);
+  font-weight: 500;
+}

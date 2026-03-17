@@ -1,0 +1,635 @@
+.build-container {
+  background: var(--color-fondo-claro);
+  border: 1px solid var(--color-borde);
+  padding: 2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+/* Esquinas decorativas */
+.build-container::before,
+.build-container::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--color-borde-claro);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.build-container::before {
+  top: 10px;
+  left: 10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.build-container::after {
+  bottom: 10px;
+  right: 10px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Header de la build */
+.build-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.build-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.build-title h2 {
+  border-bottom: none;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  color: var(--color-super-earth);
+}
+
+/* Botón de copiar minimalista */
+.btn-copy {
+  padding: 0.4rem 1rem;
+  background: transparent;
+  border: 1px solid var(--color-borde-claro);
+  color: var(--color-texto-secundario);
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transicion);
+}
+
+.btn-copy:hover {
+  border-color: var(--color-super-earth);
+  color: var(--color-super-earth);
+}
+
+/* Sección de warbonds incluidos */
+.warbonds-section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--color-fondo);
+  border-left: 3px solid var(--color-super-earth);
+}
+
+.section-label {
+  font-size: 0.8rem;
+  color: var(--color-texto-secundario);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.warbond-mini-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.warbond-mini-tag {
+  padding: 0.2rem 0.6rem;
+  border: 1px solid;
+  font-size: 0.8rem;
+  background: transparent;
+}
+
+/* Grid de la build */
+.build-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Tarjetas de items */
+.build-card {
+  padding: 1.2rem;
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  transition: var(--transicion);
+}
+
+.build-card:hover {
+  border-color: var(--color-borde-claro);
+}
+
+.build-card.full-width {
+  grid-column: span 2;
+}
+
+.build-card-header {
+  display: flex
+}
+.build-container {
+  background: var(--color-fondo-claro);
+  border: 1px solid var(--color-borde);
+  padding: 2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+/* Esquinas decorativas estilo militar */
+.build-container::before,
+.build-container::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--color-borde-claro);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.build-container::before {
+  top: 10px;
+  left: 10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.build-container::after {
+  bottom: 10px;
+  right: 10px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Header de la build */
+.build-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.build-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.build-title h2 {
+  border-bottom: none;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  color: var(--color-super-earth);
+  letter-spacing: 2px;
+}
+
+.build-title svg {
+  color: var(--color-super-earth);
+  opacity: 0.8;
+}
+
+/* Botón de copiar estilo terminal */
+.btn-copy {
+  padding: 0.4rem 1rem;
+  background: transparent;
+  border: 1px solid var(--color-borde-claro);
+  color: var(--color-texto-secundario);
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transicion);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-copy:hover {
+  border-color: var(--color-super-earth);
+  color: var(--color-super-earth);
+}
+
+.btn-copy svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Sección de warbonds incluidos */
+.warbonds-section {
+  margin-bottom: 2rem;
+  padding: 1.2rem;
+  background: var(--color-fondo);
+  border-left: 3px solid var(--color-super-earth);
+  position: relative;
+}
+
+.warbonds-section::before {
+  content: 'DEPLOYED ASSETS';
+  position: absolute;
+  top: -0.6rem;
+  left: 1rem;
+  background: var(--color-fondo-claro);
+  padding: 0 0.5rem;
+  font-size: 0.7rem;
+  color: var(--color-texto-secundario);
+  letter-spacing: 1px;
+}
+
+.section-label {
+  font-size: 0.8rem;
+  color: var(--color-texto-secundario);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.warbond-mini-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.warbond-mini-tag {
+  padding: 0.2rem 0.8rem;
+  border: 1px solid;
+  font-size: 0.8rem;
+  background: transparent;
+  border-radius: 0;
+  transition: var(--transicion);
+}
+
+.warbond-mini-tag:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--sombra-suave);
+}
+
+/* Grid de la build */
+.build-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Tarjetas de items - estilo dossier */
+.build-card {
+  padding: 1.2rem;
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  transition: var(--transicion);
+  position: relative;
+  overflow: hidden;
+}
+
+.build-card:hover {
+  border-color: var(--color-borde-claro);
+  transform: translateY(-2px);
+}
+
+.build-card.full-width {
+  grid-column: span 2;
+}
+
+/* Barra de color según tipo */
+.build-card.armadura { border-left: 3px solid var(--color-armadura); }
+.build-card.principal { border-left: 3px solid var(--color-arma-principal); }
+.build-card.secundaria { border-left: 3px solid var(--color-arma-secundaria); }
+.build-card.granada { border-left: 3px solid var(--color-granada); }
+.build-card.mejora { border-left: 3px solid var(--color-mejora); }
+.build-card.estratagemas { border-left: 3px solid var(--color-estratagema); }
+
+.build-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.build-card-header svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  opacity: 0.8;
+}
+
+.build-card-header h3 {
+  font-size: 0.9rem;
+  color: var(--color-texto-secundario);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.build-card-content {
+  padding-left: 1.7rem;
+}
+
+.item-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: var(--color-texto);
+}
+
+.item-desc {
+  font-size: 0.8rem;
+  color: var(--color-texto-secundario);
+  line-height: 1.4;
+}
+
+.item-type {
+  font-size: 0.75rem;
+  color: var(--color-texto-secundario);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--color-borde);
+  margin-top: 0.5rem;
+}
+
+/* Grid de estratagemas */
+.estratagemas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.estratagema-item {
+  background: var(--color-fondo-claro);
+  border: 1px solid var(--color-borde);
+  padding: 0.75rem;
+  transition: var(--transicion);
+}
+
+.estratagema-item:hover {
+  border-color: var(--color-estratagema);
+}
+
+.estratagema-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.est-index {
+  font-size: 0.7rem;
+  color: var(--color-texto-secundario);
+  font-family: monospace;
+}
+
+.est-nombre {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.est-tipo {
+  font-size: 0.65rem;
+  color: var(--color-texto-secundario);
+  text-transform: uppercase;
+}
+
+/* Sección de estratagemas por defecto */
+.defecto-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: var(--color-fondo);
+  border: 1px dashed var(--color-borde-claro);
+}
+
+.defecto-title {
+  font-size: 0.8rem;
+  color: var(--color-texto-secundario);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.defecto-tags {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.defecto-tag {
+  padding: 0.25rem 0.75rem;
+  background: transparent;
+  border: 1px solid var(--color-borde);
+  font-size: 0.8rem;
+  color: var(--color-texto-secundario);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .build-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .build-card.full-width {
+    grid-column: span 1;
+  }
+  
+  .estratagemas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .defecto-tags {
+    flex-wrap: wrap;
+  }
+}
+/* Advertencia de mochilas */
+.warning-section {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  background: rgba(231, 76, 60, 0.1);
+  border: 1px solid var(--color-armadura);
+  color: var(--color-armadura);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.warning-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: var(--color-armadura);
+}
+
+/* Origen del item */
+.item-origin {
+  font-size: 0.7rem;
+  color: var(--color-texto-secundario);
+  margin-top: 0.5rem;
+  padding-top: 0.25rem;
+  border-top: 1px dashed var(--color-borde);
+  text-transform: uppercase;
+}
+
+/* Estratagema con mochila */
+.estratagema-item.requires-backpack {
+  border-color: var(--color-armadura);
+  position: relative;
+}
+
+.est-backpack {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+  padding: 0.15rem 0.3rem;
+  background: rgba(231, 76, 60, 0.2);
+  border: 1px solid var(--color-armadura);
+  font-size: 0.6rem;
+  color: var(--color-armadura);
+  text-transform: uppercase;
+}
+
+.icon-micro {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.est-origen {
+  font-size: 0.65rem;
+  color: var(--color-texto-secundario);
+  margin-top: 0.5rem;
+  text-align: right;
+}
+
+/* Opciones */
+.options-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+  background: var(--color-fondo-claro);
+  border: 1px solid var(--color-borde);
+}
+
+.compatibility-note {
+  font-size: 0.8rem;
+  color: var(--color-texto-secundario);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-icon-right {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .selector-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .options-section {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
+/* Estadísticas de compatibilidad */
+.compatibility-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+}
+
+.compatibility-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.compatibility-item.valid {
+  color: var(--color-exito);
+  border: 1px solid var(--color-exito);
+}
+
+.compatibility-item.invalid {
+  color: var(--color-error);
+  border: 1px solid var(--color-error);
+}
+
+.stat-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Estilos para armas de apoyo */
+.estratagema-item.support-weapon {
+  border-color: var(--color-mejora);
+}
+
+.est-support {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+  padding: 0.15rem 0.3rem;
+  background: rgba(155, 89, 182, 0.2);
+  border: 1px solid var(--color-mejora);
+  font-size: 0.6rem;
+  color: var(--color-mejora);
+  text-transform: uppercase;
+}
+
+/* Mejoras en tooltips */
+.estratagema-item {
+  position: relative;
+}
+
+.estratagema-item:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.25rem 0.5rem;
+  background: var(--color-fondo-claro);
+  border: 1px solid var(--color-borde-claro);
+  font-size: 0.7rem;
+  white-space: nowrap;
+  z-index: 10;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .compatibility-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .compatibility-item {
+    width: 100%;
+    justify-content: center;
+  }
+}

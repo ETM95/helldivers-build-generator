@@ -1,0 +1,288 @@
+.selector-container {
+  background: var(--color-fondo-claro);
+  border: 1px solid var(--color-borde);
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* Decoración de esquinas militares */
+.selector-container::before,
+.selector-container::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-borde-claro);
+  pointer-events: none;
+}
+
+.selector-container::before {
+  top: 10px;
+  left: 10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.selector-container::after {
+  bottom: 10px;
+  right: 10px;
+  border-left: none;
+  border-top: none;
+}
+
+.selector-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.selector-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.selector-title h2 {
+  border-bottom: none;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+  color: var(--color-super-earth);
+}
+
+.selector-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.selector-buttons .btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.75rem;
+}
+
+/* Grid de warbonds */
+.warbond-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  max-height: 450px;
+  overflow-y: auto;
+  padding: 0.25rem;
+}
+
+/* Tarjetas de warbond estilo dossier */
+.warbond-card {
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  cursor: pointer;
+  transition: var(--transicion);
+  position: relative;
+  overflow: hidden;
+}
+
+.warbond-card:hover {
+  border-color: var(--color-borde-claro);
+  transform: translateY(-2px);
+}
+
+.warbond-card.selected {
+  border-color: var(--color-super-earth);
+  background: linear-gradient(135deg, 
+    var(--color-fondo) 0%, 
+    rgba(255, 217, 102, 0.05) 100%);
+}
+
+/* Barra de color del warbond */
+.warbond-color-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+}
+
+/* Contenido de la tarjeta */
+.warbond-content {
+  padding: 1rem 1rem 1rem calc(1rem + 4px);
+}
+
+.warbond-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.warbond-info h3 {
+  font-size: 1rem;
+  color: var(--color-texto);
+  margin-bottom: 0.25rem;
+}
+
+.warbond-date {
+  font-size: 0.7rem;
+  color: var(--color-texto-secundario);
+  text-transform: uppercase;
+}
+
+/* Checkbox personalizado */
+.warbond-check {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 1px solid var(--color-borde-claro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transicion);
+}
+
+.warbond-card.selected .warbond-check {
+  border-color: var(--color-super-earth);
+  background: var(--color-super-earth);
+}
+
+.warbond-check svg {
+  width: 0.8rem;
+  height: 0.8rem;
+  color: var(--color-fondo);
+  opacity: 0;
+}
+
+.warbond-card.selected .warbond-check svg {
+  opacity: 1;
+}
+
+/* Tags de items */
+.warbond-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.warbond-tag {
+  padding: 0.2rem 0.4rem;
+  font-size: 0.65rem;
+  border: 1px solid;
+  background: transparent;
+  text-transform: uppercase;
+}
+
+.warbond-tag.primary {
+  border-color: var(--color-arma-principal);
+  color: var(--color-arma-principal);
+}
+
+.warbond-tag.secondary {
+  border-color: var(--color-arma-secundaria);
+  color: var(--color-arma-secundaria);
+}
+
+.warbond-tag.grenade {
+  border-color: var(--color-granada);
+  color: var(--color-granada);
+}
+
+.warbond-tag.armor {
+  border-color: var(--color-armadura);
+  color: var(--color-armadura);
+}
+
+.warbond-tag.stratagem {
+  border-color: var(--color-estratagema);
+  color: var(--color-estratagema);
+}
+
+.warbond-tag.booster {
+  border-color: var(--color-mejora);
+  color: var(--color-mejora);
+}
+
+/* Total de items */
+.warbond-total {
+  text-align: right;
+  font-size: 0.7rem;
+  color: var(--color-texto-secundario);
+  border-top: 1px solid var(--color-borde);
+  padding-top: 0.5rem;
+}
+
+/* Scrollbar personalizado para el grid */
+.warbond-grid::-webkit-scrollbar {
+  width: 4px;
+}
+
+.warbond-grid::-webkit-scrollbar-track {
+  background: var(--color-fondo);
+}
+
+.warbond-grid::-webkit-scrollbar-thumb {
+  background: var(--color-borde-claro);
+}
+
+.warbond-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--color-super-earth);
+}
+/* Toggle para Super Citizen */
+.selector-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.super-citizen-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--color-fondo);
+  border: 1px solid var(--color-borde-claro);
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.super-citizen-toggle:hover {
+  border-color: var(--color-super-earth);
+}
+
+.super-citizen-toggle input[type="checkbox"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--color-borde-claro);
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.super-citizen-toggle input[type="checkbox"]:checked {
+  background: var(--color-super-earth);
+  border-color: var(--color-super-earth);
+}
+
+.super-citizen-toggle .icon-small {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-super-earth);
+}
+
+.super-citizen-toggle span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Estilo para warbonds de Super Citizen */
+.warbond-card.super {
+  border-color: var(--color-super-earth);
+  background: linear-gradient(135deg, var(--color-fondo) 0%, rgba(241, 196, 15, 0.1) 100%);
+}
+
+.super-icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-super-earth);
+  margin-left: 0.25rem;
+}
